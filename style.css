@@ -1,0 +1,73 @@
+/* Importation de  Bubblegum Sans depuis Google Fonts . les polices proposes ici ne me plaisait pas */
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+body {
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;   /* centre le cadre horizontalement */
+    align-items: center;       /* centre le cadre verticalement */
+    background: linear-gradient(to bottom, #87CEEB, #191970); /* bleu ciel → bleu nuit */
+    font-family: Arial, sans-serif;
+}
+
+/* je cree le cadre du jeu */
+#jeu-cadre {
+    background: rgba(25, 25, 112, 0.7); /* légèrement plus foncé que le fond */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column; /* empile tout verticalement */
+    align-items: center;    /* centre horizontalement le contenu */
+    text-align: center;
+    width: 350px;           /* largeur du cadre */
+}
+
+/* j' essaie l'animation de couleurs pour le titre . Qui ne tente rien n'a rien 😂*/
+@keyframes couleurTitre {
+    0% { color: #ff6ec4; }
+    25% { color: #00BFFF; }
+    50% { color: #7FFF00; }
+    75% { color: #FFD700; }
+    100% { color: #ff6ec4; }
+}
+/* ca n'a meme pas marche . Stuiiip */
+h1 {
+    color: white;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 25px;
+    animation: couleurTitre 5s infinite alternate; /*apparement c'est l' animation infinie */
+}
+
+/* Input et bouton */
+input, button {
+    font-size: 1.2em;
+    padding: 10px 15px;
+    margin: 8px 0;          /* marge verticale pour espacer les éléments */
+    border-radius: 10px;
+    border: none;
+    width: 80%;             /* prend 80% de la largeur du cadre */
+}
+
+button {
+    cursor: pointer;
+    background-color: #00BFFF; /* bleu ciel vif */
+    color: white;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #1E90FF;
+}
+
+/* Messages et compteur */
+#message, #compteur {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+/*fini! j'espere au moins ca va fonctionner */
